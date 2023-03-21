@@ -1,0 +1,38 @@
+[package]
+title = "lambdaprime scripts for Omniverse"
+
+version = "1.0.0"
+
+description = """Scripts for Omniverse
+"""
+# Keywords make  it browseable in UI using the "experience" filter
+keywords = ["app"]
+
+[dependencies]
+"omni.kit.asset_converter" = {}
+
+[settings]
+# when you don't need RTX you can use the compatibility mode, faster load and work on "any" GPU
+exts."omni.kit.renderer.core".compatibilityMode = true
+
+# deprecate support for old kit.ui.menu
+# (support legacy_mode will probably be removed for Kit 104)
+app.menu.legacy_mode = false
+
+# this is used in our setup file to display the Version to the user in the title bar
+app.titleVersion = "1.0"
+
+# Skip long full shutdown and exit quickly
+app.fastShutdown = true
+
+# Register extension folders from this repo in kit
+# These are the paths where Kit looks for extensions
+# Your application is using Extensions from your application
+# Here they are setup into a single folder "exts" but you can have you own structure if you need
+# see we also add the Extension from the Base application using their extscache
+[settings.app.exts]
+folders.'++' = ["${app}/../exts", "${app}/../extscache/", "${app}/../baseapp/exts", "${app}/../baseapp/extscache", "${app}/../baseapp/apps"]
+
+# Extension registry is not yet enabled for public apps
+[settings.app.extensions]
+registryEnabled = false

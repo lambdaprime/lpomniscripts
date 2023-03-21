@@ -1,0 +1,5 @@
+<project toolsVersion="5.0">
+  <dependency name="premake" linkPath="../_build/host-deps/premake">
+    <package name="premake" version="5.0.0-alpha15.dev+pipeline3388156.1f299ea4-${platform}"/>
+  </dependency>
+</project>
