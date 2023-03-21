@@ -6,7 +6,7 @@
 
 # Download
 
-[Release versions](https://github.com/lambdaprime/lpomniscripts/tree/main/lpomniscripts/release/CHANGELOG.md)
+[Release versions](https://github.com/lambdaprime/lpomniscripts/blob/main/release/CHANGELOG.md)
 
 # Install
 
